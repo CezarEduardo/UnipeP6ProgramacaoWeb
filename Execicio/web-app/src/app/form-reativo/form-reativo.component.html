@@ -1,0 +1,18 @@
+<form [formGroup]='formCadastro' (ngSubmit)='enviar()'>
+    <div class="col-md-6 offset-md-3">
+        <div>
+            Nome: <input type="text" id="nome" name="nome" formControlName="nome" />
+        </div>
+
+        <div>
+            E-mail: <input type="text" id="email" name="email" formControlName="email" />
+        </div>
+
+        <div>
+            Telefone: <input type="text" id="telefone" name="telefone" formControlName="telefone" />
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="formCadastro.invalid"> Enviar</button>
+    </div>
+
+</form>

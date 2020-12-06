@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <h2>Card Angular</h2>
+
+  <div *ngIf="exibe" class="w3-card-4 w3-dark-grey" style="width:50%">
+    <h3>Perfil de {{ usuario }}</h3>
+    <p>Profissão:{{ profissao }}</p>
+
+    <div class="w3-container w3-center">
+     
+      <img [src]="imagem" alt="Avatar" style="width:80%">
+      <h5>{{usuario}}</h5>
+
+    </div>
+    
+    <div *ngFor="let certification of lista" >
+
+        <div class="alert alert-primary" role="alert">
+              {{certification.cert}}
+        </div>
+
+    </div>
+
+  </div>
+
+  <div class="w3-section">
+    <button class="w3-button w3-green" (click)="exibePerfil()">Exibir</button>
+    <button class="w3-button w3-red" (click)="ocultar()">Ocultar</button>
+  </div>
+  
+
+  
+  
+</div>
+
+</body>
+</html>
